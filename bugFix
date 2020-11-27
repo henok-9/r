@@ -1,1 +1,45 @@
-file
+  GNU nano 5.3                            config.ini                            Modified  
+type = internal/alsa
+;speaker-mixer = Speaker
+;headphone-mixer = Headphone
+;headphone-id = 16
+;mapped = true
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+format-muted-prefix = " "
+label-muted = MUTE
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+ramp-volume-4 = 
+ramp-volume-5 = 
+ramp-volume-6 = 
+
+[module/network]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/check-network
+click-left = networkmanager_dmenu &
+click-right = networkmanager_dmenu &
+tail = true
+
+[module/date]
+type = internal/date
+interval = 30
+label =  %time%
+time =  %H:%M %p
+time-alt =  %Y-%m-%d
+
+[module/powermenu]
+type = custom/text
+content = 
+content-padding = 2
+content-background = ${color.acolor}
+content-foreground = ${color.fg}
+click-left = $HOME/.config/polybar/scripts/sysmenu
+click-right = $HOME/.config/polybar/scripts/sysmenu
+
+;== EOF ========================================================
+
+
